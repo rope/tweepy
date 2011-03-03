@@ -17,7 +17,7 @@ def parse_datetime(string):
     date = datetime(*(time.strptime(string, '%a %b %d %H:%M:%S +0000 %Y')[0:6]))
 
     # Reset locale back to the default setting
-    locale.setlocale(locale.LC_TIME, '')
+    locale.setlocale(locale.LC_TIME, 'C')
     return date
 
 
@@ -41,7 +41,7 @@ def parse_search_datetime(string):
     date = datetime(*(time.strptime(string, '%a, %d %b %Y %H:%M:%S +0000')[0:6]))
 
     # Reset locale back to the default setting
-    locale.setlocale(locale.LC_TIME, '')
+    locale.setlocale(locale.LC_TIME, 'C')
     return date
 
 
